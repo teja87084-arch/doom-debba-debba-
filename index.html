@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06140e">
+  <title>DOOM DHEBBA DHEBBA</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="app">
+
+    <section id="welcomeScreen" class="screen welcome-screen">
+      <div class="welcome-glow"></div>
+      <div class="brand-mark"></div>
+
+      <div class="welcome-copy">
+        <p class="eyebrow"></p>
+        <h1>DOOM<br><span>DEBBA DEBBA</span></h1>
+        <p class="tagline"></p>
+      </div>
+
+      <button id="playIntroBtn" class="action-button glass-button" type="button">
+        PLAY <span>GAME</span><b>↗</b>
+      </button>
+
+      <div class="bottom-note"></div>
+    </section>
+
+    <section id="introScreen" class="screen intro-screen hidden">
+      <div class="intro-top">
+        <span class="brand-mark"></span>
+        <span class="chapter"></span>
+      </div>
+
+      <div class="intro-content">
+        <p class="eyebrow">THE BATTLE BEGINS</p>
+        <h1>THOR <span>VS</span> DOOM</h1>
+
+        <p class="intro-description">
+          
+        </p>
+
+        <div class="versus-art">
+          <div class="character thor-card">
+            <img src="./thor.png.png" alt="Thor">
+            <span>THOR</span>
+          </div>
+
+          <div class="versus-symbol">VS</div>
+
+          <div class="character doom-card">
+            <img src="./doombabu.png" alt="Doom">
+            <span>DOOM</span>
+          </div>
+        </div>
+
+        <div class="instructions">
+          <span>01</span> Aim with mouse or touch
+          <i></i>
+          <span>02</span> Tap or press SPACE to attack
+        </div>
+
+        <div class="start-button-container">
+          <button id="startGameBtn" class="action-button start-button" type="button">
+            START GAME <b>→</b>
+          </button>
+        </div>
+      </div>
+
+      <div class="bottom-note">READY YOUR THUNDER</div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <header class="hud">
+        <div class="hud-title">
+          <span class="status-dot"></span>
+          <span>DOOM DEBBA DEBBA</span>
+        </div>
+
+        <div class="stats">
+          <div><small>HITS</small><b id="hits">0</b></div>
+          <div><small>SCORE</small><b id="score">0</b></div>
+          <div><small>LEVEL</small><b id="level">1</b></div>
+        </div>
+      </header>
+
+      <section id="arena" class="arena">
+        <canvas id="canvas" aria-label="Game area. Aim and tap to shoot."></canvas>
+        <div id="loading" class="overlay-message">LOADING CHARACTERS…</div>
+        <div id="error" class="overlay-message error-message"></div>
+
+        <div class="arena-hint">
+          AIM + TAP TO STRIKE <span>•</span> SPACE TO SHOOT
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <audio id="introAudio" src="./Intro.mp3" preload="auto"></audio>
+  <audio id="backgroundAudio" src="./Background Ost.mp3" preload="auto" loop></audio>
+  <audio id="thorAttackSound" src="./Thor Attack .mp3" preload="auto"></audio>
+  <audio id="doomSound" src="./Doom Defence .mp3" preload="auto"></audio>
+  <audio id="alayaSound" src="./Yelena .mp3" preload="auto"></audio>
+
+  <script src="./games.js"></script>
+</body>
+</html>
